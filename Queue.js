@@ -20,6 +20,9 @@ class Queue {
     if(this.size == this.max) {
       return false;
     }
+    if(this.tail == this.max){
+      this.tail = 0;
+    }
     this.data[this.tail] = x;
     this.size++;
     this.tail++;
@@ -33,7 +36,6 @@ class Queue {
     const x = this.data[this.head];
     this.size--;
     this.head++;
-    this.tail--;
     if(this.head == this.max) {
       this.head = 0;
     }

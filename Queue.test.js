@@ -39,12 +39,11 @@ test('สร้าง queue size 1 และ dequeue เลย จะต้อ�
 test('7 bug tail สร้าง queue size 3 แล้วเพิ่ม enqueue 1 ค่า แล้วdequeue 2 ค่า แล้วเพิ่ม enqueue 1 ค่าผลลัพธ์ จะได้ tail เท่ากับ 2',()=>{
     const queue = new Queue(3)
     queue.enqueue(1)
-    queue.enqueue(23)
     queue.enqueue(2)
     queue.dequeue()
     queue.dequeue()
-    queue.enqueue(2)
-    expect(queue.tail).toBe(2)
+    queue.enqueue(3)
+    expect(queue.tail).toBe(3)
 })
 
 test('8 bug head',()=>{
